@@ -28,7 +28,7 @@ Sala* criarSala(char nome[]) {
     return novaSala;
 }
 
-void esplorarSalas(Sala *atual) {
+void explorarSalas(Sala *atual) {
     char opcao;
 
     while (atual != NULL) {
