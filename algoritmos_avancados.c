@@ -8,7 +8,7 @@
 
 typedef struct Sala {
     char nome [50];
-    struct sala *esquerda;
+    struct Sala *esquerda;
     struct Sala *direita;
 }Sala;
 
@@ -96,12 +96,32 @@ void liberarMemoria(Sala *raiz) {
 int main() {
 
     // 🌱 Nível Novato: Mapa da Mansão com Árvore Binária
-    
     // - Crie uma struct Sala com nome, e dois ponteiros: esquerda e direita.
     // - Use funções como criarSala(), conectarSalas() e explorarSalas().
     // - A árvore pode ser fixa: Hall de Entrada, Biblioteca, Cozinha, Sótão etc.
     // - O jogador deve poder explorar indo à esquerda (e) ou à direita (d).
-    // - Finalize a exploração com uma opção de saída (s).
+   
+    Sala *hall = criarSala("Hall de Entrada");
+
+    hall->esquerda = criarSala("Sala de Estar");
+    hall->direita = criarSala("Biblioteca");
+
+    hall->esquerda->esquerda = criarSala("Cozinha");
+    hall->esquerda->direita = criarSala("Jardim");
+
+    hall->direita->esquerda = criarSala("Escritorio");
+    hall->direita->direita = criarSala("sala Secreta");
+
+    printf("==============================\n");
+    printf("      EXPLORANDO A MANSAO     \n");
+    printf("==============================\n");
+
+    explorarSalas(hall);
+
+    liberarMemoria(hall);
+
+
+     // - Finalize a exploração com uma opção de saída (s).
     // - Exiba o nome da sala a cada movimento.
     // - Use recursão ou laços para caminhar pela árvore.
     // - Nenhuma inserção dinâmica é necessária neste nível.
