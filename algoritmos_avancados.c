@@ -50,7 +50,7 @@ void explorarSalas(Sala *atual) {
         if (atual->direita != NULL)
             printf("D - Ir para a direita\n");
 
-        printf("S - Ssair da exploração\n");
+        printf("S - Sair da exploração\n");
 
         printf("\nEscolha: ");
         scanf(" %c", &opcao);
@@ -73,7 +73,7 @@ void explorarSalas(Sala *atual) {
 
         } else if (opcao =='s' || opcao == 'S') {
 
-            printf("\nExploracao encerradapelo jogador.\n");
+            printf("\nExploracao encerrada pelo jogador.\n\n");
             break;
 
         } else {
