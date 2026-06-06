@@ -28,7 +28,7 @@ Sala* criarSala(char nome[]) {
     return novaSala;
 }
 
-void esplararSalas(Sala *atual) {
+void esplorarSalas(Sala *atual) {
     char opcao;
 
     while (atual != NULL) {
@@ -55,7 +55,7 @@ void esplararSalas(Sala *atual) {
         printf("\nEscolha: ");
         scanf(" %c", &opcao);
 
-        if (opcao == 'e' || opcap == 'E') {
+        if (opcao == 'e' || opcao == 'E') {
 
             if (atual->esquerda != NULL) {
                 atual = atual->esquerda;
