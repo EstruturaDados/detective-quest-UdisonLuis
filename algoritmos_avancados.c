@@ -28,7 +28,60 @@ Sala* criarSala(char nome[]) {
     return novaSala;
 }
 
+void esplararSalas(Sala *atual) {
+    char opcao;
 
+    while (atual != NULL) {
+
+        printf("\n===============================");
+        printf("\nVoce esta em: %s\n", atual->nome);
+
+        if (atual->esquerda == NULL && atual->direita == NULL) {
+            printf("Este comodo não possui mais caminhos.\n");
+            printf("Fim da exploracao!\n");
+            break;    
+        }
+
+        printf("\nCaminhos disponiveis:\n");
+
+        if (atual->esquerda != NULL)
+            printf("E - Ir Para a esquerda\n");
+
+        if (atual->direita != NULL)
+            printf("D - Ir para a direita\n");
+
+        printf("S - Ssair da exploração\n");
+
+        printf("\nEscolha: ");
+        scanf(" %c", &opcao);
+
+        if (opcao == 'e' || opcap == 'E') {
+
+            if (atual->esquerda != NULL) {
+                atual = atual->esquerda;
+            } else {
+                printf("Nao existe caminho para a esquerda!\n");
+            }
+
+        } else if(opcao == 'd' || opcao == "D") {
+
+            if (atual->direita != NULL) {
+                atual = atual->direita;
+            } else {
+                printf("Nao existe caminho para a direita!\n");
+            }
+
+        } else if (opcao =='s' || opcao == 'S') {
+
+            printf("\nExploracao encerradapelo jogador.\n");
+            break;
+
+        } else {
+
+            printf("Opcao invalida!\n");
+        }
+    }
+}
 
 int main() {
 
