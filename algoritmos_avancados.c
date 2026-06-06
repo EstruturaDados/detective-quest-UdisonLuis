@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 // Desafio Detective Quest
 // Tema 4 - Árvores e Tabela Hash
@@ -8,7 +10,7 @@
 int main() {
 
     // 🌱 Nível Novato: Mapa da Mansão com Árvore Binária
-    //
+    
     // - Crie uma struct Sala com nome, e dois ponteiros: esquerda e direita.
     // - Use funções como criarSala(), conectarSalas() e explorarSalas().
     // - A árvore pode ser fixa: Hall de Entrada, Biblioteca, Cozinha, Sótão etc.
