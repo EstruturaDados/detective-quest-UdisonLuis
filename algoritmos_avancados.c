@@ -63,7 +63,7 @@ void explorarSalas(Sala *atual) {
                 printf("Nao existe caminho para a esquerda!\n");
             }
 
-        } else if(opcao == 'd' || opcao == "D") {
+        } else if(opcao == 'd' || opcao == 'D') {
 
             if (atual->direita != NULL) {
                 atual = atual->direita;
