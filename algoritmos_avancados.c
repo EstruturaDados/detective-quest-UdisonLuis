@@ -38,7 +38,7 @@ void explorarSalas(Sala *atual) {
 
         if (atual->esquerda == NULL && atual->direita == NULL) {
             printf("Este comodo não possui mais caminhos.\n");
-            printf("Fim da exploracao!\n");
+            printf("Fim da exploracao!\n\n");
             break;    
         }
 
@@ -73,7 +73,7 @@ void explorarSalas(Sala *atual) {
 
         } else if (opcao =='s' || opcao == 'S') {
 
-            printf("\nExploracao encerrada pelo jogador.\n\n");
+            printf("\nExploracao encerrada pelo jogador.\n");
             break;
 
         } else {
