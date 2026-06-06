@@ -83,6 +83,16 @@ void esplararSalas(Sala *atual) {
     }
 }
 
+void liberarMemoria(Sala *raiz) {
+    if (raiz == NULL)
+    return;
+
+    liberarMemoria(raiz->esquerda);
+    liberarMemoria(raiz->direita);
+
+    free(raiz);
+}
+
 int main() {
 
     // 🌱 Nível Novato: Mapa da Mansão com Árvore Binária
