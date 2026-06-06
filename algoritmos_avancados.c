@@ -5,7 +5,30 @@
 // Desafio Detective Quest
 // Tema 4 - Árvores e Tabela Hash
 // Este código inicial serve como base para o desenvolvimento das estruturas de navegação, pistas e suspeitos.
+
+typedef struct Sala {
+    char nome [50];
+    struct sala *esquerda;
+    struct Sala *direita;
+}Sala;
+
 // Use as instruções de cada região para desenvolver o sistema completo com árvore binária, árvore de busca e tabela hash.
+Sala* criarSala(char nome[]) {
+    Sala *novaSala = (Sala*)malloc(sizeof(Sala));
+
+    if(novaSala ==NULL) {
+        printf("Erro de alocação de memoria\n");
+        exit(1);
+    }
+
+    strcpy(novaSala->nome, nome);
+    novaSala->esquerda = NULL;
+    novaSala->direita = NULL;
+
+    return novaSala;
+}
+
+
 
 int main() {
 
